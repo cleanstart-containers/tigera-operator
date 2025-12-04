@@ -4,7 +4,7 @@ Tigera Operator is the Kubernetes operator that manages Calico networking and ne
 
 **📌 CleanStart Foundation:** Security-hardened, minimal base OS designed for enterprise containerized environments.
 
-**Image Path:** `cleanstart/tigera-operator`
+**Image Path:** `ghcr.io/cleanstart-containers/tigera-operator`
 
 **Registry:** CleanStart Registry
 
@@ -28,7 +28,7 @@ CleanStart images are built on secure, minimal base operating systems and optimi
 
 ## Image Details
 
-**Image:** `cleanstart/tigera-operator:latest-dev`
+**Image:** `ghcr.io/cleanstart-containers/tigera-operator:latest-dev`
 
 **Key Specifications:**
 - **User:** `clnstrt` (non-root, UID 1000)
@@ -75,15 +75,15 @@ Typical scenarios where this container excels:
 
 ### Pull Commands
 ```bash
-docker pull cleanstart/tigera-operator:latest
-docker pull cleanstart/tigera-operator:latest-dev
+docker pull ghcr.io/cleanstart-containers/tigera-operator:latest
+docker pull ghcr.io/cleanstart-containers/tigera-operator:latest-dev
 ```
 
 ### Run Commands
 
 Basic test:
 ```bash
-docker run -it --name tigera-operator-test cleanstart/tigera-operator:latest-dev
+docker run -it --name tigera-operator-test ghcr.io/cleanstart-containers/tigera-operator:latest-dev
 ```
 
 Production deployment:
@@ -92,7 +92,7 @@ docker run -d --name tigera-operator-prod \
   --read-only \
   --security-opt=no-new-privileges \
   --user 1000:1000 \
-  cleanstart/tigera-operator:latest
+  ghcr.io/cleanstart-containers/tigera-operator:latest
 ```
 
 ---
@@ -190,8 +190,8 @@ CleanStart images support multiple architectures to ensure compatibility across 
 
 ### Architecture-based Pull Commands
 ```bash
-docker pull --platform linux/amd64 cleanstart/tigera-operator:latest
-docker pull --platform linux/arm64 cleanstart/tigera-operator:latest
+docker pull --platform linux/amd64 ghcr.io/cleanstart-containers/tigera-operator:latest
+docker pull --platform linux/arm64 ghcr.io/cleanstart-containers/tigera-operator:latest
 ```
 
 ---
