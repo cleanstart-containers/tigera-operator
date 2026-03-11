@@ -40,8 +40,8 @@ kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.27.0/
 # Navigate to the deployment directory
 cd containers/tigera-operator/kubernetes
 
-# Apply the deployment
-kubectl apply -f deployment.yaml
+# Delete the deployment that came during crd's installation and apply our the deployment
+kubectl delete deployment tigera-operator -n tigera-operator && kubectl apply -f deployment.yaml
 ```
 
 **Expected Output:**
